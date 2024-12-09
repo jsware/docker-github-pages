@@ -1,0 +1,11 @@
+services:
+  github-pages:
+    image: jsware/github-pages
+    container_name: GitHub-Pages
+    environment:
+      JEKYLL_GITHUB_TOKEN: $JEKYLL_GITHUB_TOKEN
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./docs:/home
+    tty: true
